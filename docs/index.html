@@ -1,6 +1,24 @@
-<html>
-  <head></head>
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <title>here goes nothing</title>
+  </head>
   <body>
-    hello,javascript
+    <p>hello,javascript</p>
+    <button>Click me</button>
   </body>
 </html>
+
+<script>
+  function createParagraph() {
+    var p = document.createElement('p');
+    p.textContent = 'You clicked this';
+    document.body.appendChild(p)
+  }
+  
+  var buttons = document.querySelectorAll('button');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', createParagraph);
+  }
+</script>
